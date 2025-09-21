@@ -1,4 +1,6 @@
-export default function SiteFooter({ siteSettings }: { siteSettings: any }) {
+import type { SiteSettings } from "@/lib/cms";
+
+export default function SiteFooter({ siteSettings }: { siteSettings: SiteSettings }) {
   return (
     <footer className="bg-[#F9F6F3] py-8 mt-16 border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">

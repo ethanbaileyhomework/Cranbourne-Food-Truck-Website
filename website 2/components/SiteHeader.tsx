@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
+import type { SiteSettings } from "@/lib/cms";
 
 const nav = [
   { href: "/", text: "Home" },
@@ -12,7 +13,7 @@ const nav = [
   { href: "/sponsors-partners", text: "Sponsors & Partners" }
 ];
 
-export default function SiteHeader({ siteSettings }: { siteSettings: any }) {
+export default function SiteHeader({ siteSettings }: { siteSettings: SiteSettings }) {
   const [open, setOpen] = useState(false);
 
   return (

@@ -6,12 +6,12 @@ export default function ServiceInfo({
   phone,
   email
 }: {
-  days: string;
-  times: string;
-  location: string;
-  whatToExpect: string;
-  phone: string;
-  email: string;
+  days?: string;
+  times?: string;
+  location?: string;
+  whatToExpect?: string;
+  phone?: string;
+  email?: string;
 }) {
   return (
     <div className="bg-white rounded-xl shadow-subtle p-6 max-w-3xl mx-auto flex flex-col gap-3">

@@ -1,4 +1,4 @@
-export default function MapEmbed({ url }: { url: string }) {
+export default function MapEmbed({ url }: { url?: string }) {
   if (!url) return null;
   return (
     <div className="mt-6 rounded-xl overflow-hidden shadow-subtle max-w-3xl mx-auto">

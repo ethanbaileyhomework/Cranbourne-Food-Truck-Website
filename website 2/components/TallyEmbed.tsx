@@ -1,4 +1,4 @@
-export default function TallyEmbed({ url }: { url: string }) {
+export default function TallyEmbed({ url }: { url?: string }) {
   if (!url) return null;
   return (
     <iframe

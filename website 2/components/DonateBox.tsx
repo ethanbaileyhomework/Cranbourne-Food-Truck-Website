@@ -3,9 +3,9 @@ export default function DonateBox({
   paypal,
   stripe
 }: {
-  bank: { name: string; bsb: string; number: string; reference: string };
-  paypal: string;
-  stripe: string;
+  bank: { name?: string; bsb?: string; number?: string; reference?: string };
+  paypal?: string;
+  stripe?: string;
 }) {
   return (
     <div className="bg-white rounded-xl shadow-subtle p-6 mt-6 flex flex-col gap-4">

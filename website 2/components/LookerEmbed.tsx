@@ -1,4 +1,4 @@
-export default function LookerEmbed({ url }: { url: string }) {
+export default function LookerEmbed({ url }: { url?: string }) {
   if (!url) return null;
   return (
     <iframe
