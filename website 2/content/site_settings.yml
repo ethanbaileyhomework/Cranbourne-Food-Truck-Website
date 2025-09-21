@@ -1,0 +1,22 @@
+site_name: Cranbourne Food Truck
+logo: /placeholder-logo.png
+primary_color: "#C3423F"
+contact_email: hello@example.com
+contact_phone: "0000 000 000"
+contact_address: 123 Your Street, Cranbourne VIC
+abn: "00 000 000 000"
+social_links:
+  facebook: "#"
+  instagram: "#"
+  twitter: "#"
+bank_account_name: ""
+bank_bsb: ""
+bank_account_number: ""
+bank_reference: ""
+paypal_link: ""
+stripe_link: ""
+looker_url: ""
+map_embed_url: ""
+donate_copy: "Your donation helps us serve more people. Thank you for your support!"
+volunteer_intro: "Join our volunteer team and make a difference in your community!"
+tally_form_url: ""

@@ -1,0 +1,114 @@
+backend:
+  name: github
+  repo: ethanbaileyhomework/cranbourne-food-truck-website
+  branch: main
+  site_domain: cranbournefoodtruck.com
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: https://cranbournefoodtruck.com
+
+collections:
+  - name: "site_settings"
+    label: "Site Settings"
+    files:
+      - file: "content/site_settings.yml"
+        name: "site_settings"
+        label: "Site Settings"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Primary Color", name: "primary_color", widget: "color" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "Contact Phone", name: "contact_phone", widget: "string" }
+          - { label: "Contact Address", name: "contact_address", widget: "string" }
+          - { label: "ABN", name: "abn", widget: "string" }
+          - { label: "Social Links", name: "social_links", widget: "object", fields: [
+                { label: "Facebook", name: "facebook", widget: "string", required: false },
+                { label: "Instagram", name: "instagram", widget: "string", required: false },
+                { label: "Twitter", name: "twitter", widget: "string", required: false }
+            ]}
+          - { label: "Bank Account Name", name: "bank_account_name", widget: "string", required: false }
+          - { label: "BSB", name: "bank_bsb", widget: "string", required: false }
+          - { label: "Account Number", name: "bank_account_number", widget: "string", required: false }
+          - { label: "Reference", name: "bank_reference", widget: "string", required: false }
+          - { label: "PayPal Link", name: "paypal_link", widget: "string", required: false }
+          - { label: "Stripe Link", name: "stripe_link", widget: "string", required: false }
+          - { label: "Looker Studio URL", name: "looker_url", widget: "string", required: false }
+          - { label: "Google Map Embed URL", name: "map_embed_url", widget: "string", required: false }
+          - { label: "Donate Page Copy", name: "donate_copy", widget: "markdown", required: false }
+          - { label: "Volunteer Intro", name: "volunteer_intro", widget: "markdown", required: false }
+          - { label: "Tally Form URL", name: "tally_form_url", widget: "string", required: false }
+
+  - name: "home"
+    label: "Home Page"
+    files:
+      - file: "content/home.md"
+        name: "home"
+        label: "Home Page"
+        fields:
+          - { label: "Hero Headline", name: "hero_headline", widget: "string" }
+          - { label: "Hero Subhead", name: "hero_subhead", widget: "string" }
+          - { label: "Hero Image", name: "hero_image", widget: "image" }
+          - { label: "Service Days", name: "service_days", widget: "string" }
+          - { label: "Service Times", name: "service_times", widget: "string" }
+          - { label: "Service Location", name: "service_location", widget: "string" }
+          - { label: "Service What", name: "service_what", widget: "string" }
+          - { label: "What We Do Cards", name: "what_we_do_cards", widget: "list", fields: [
+                { label: "Title", name: "title", widget: "string" },
+                { label: "Body", name: "body", widget: "string" },
+                { label: "Image", name: "image", widget: "image", required: false }
+            ]}
+          - { label: "Testimonials", name: "testimonials", widget: "list", fields: [
+                { label: "Image", name: "image", widget: "image", required: false },
+                { label: "Quote", name: "quote", widget: "string" },
+                { label: "Name", name: "name", widget: "string", required: false }
+            ]}
+
+  - name: "stats_settings"
+    label: "Stats Settings"
+    files:
+      - file: "content/stats_settings.yml"
+        name: "stats_settings"
+        label: "Stats Settings"
+        fields:
+          - { label: "Sheet ID", name: "sheet_id", widget: "string", required: false }
+          - { label: "Range", name: "range", widget: "string", required: false }
+          - { label: "Field Mapping", name: "field_mapping", widget: "string", required: false }
+          - { label: "Fallback Numbers", name: "fallback_numbers", widget: "string", required: false }
+          - { label: "Looker Studio URL", name: "looker_url", widget: "string", required: false }
+
+  - name: "team"
+    label: "Team"
+    folder: "content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Headshot", name: "headshot", widget: "image", required: false }
+      - { label: "Short Bio", name: "bio", widget: "text" }
+      - { label: "Email", name: "email", widget: "string", required: false }
+
+  - name: "stories"
+    label: "Stories"
+    folder: "content/stories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Images", name: "images", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
+
+  - name: "partners"
+    label: "Partners"
+    folder: "content/partners"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Logo", name: "logo", widget: "image" }
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Blurb", name: "blurb", widget: "string" }
