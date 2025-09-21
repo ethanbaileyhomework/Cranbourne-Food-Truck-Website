@@ -1,4 +1,4 @@
-import { getStatsSettings, getServiceStats } from "@/lib/cms";
+import { getStatsSettings, getServiceStats } from "../../lib/cms";
 import LookerEmbed from "../../components/LookerEmbed";
 import KPICounterRow from "../../components/KPICounterRow";
 

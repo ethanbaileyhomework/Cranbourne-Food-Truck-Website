@@ -2,7 +2,7 @@ import "./globals.css";
 import { Metadata } from "next";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-import { getSiteSettings } from "@/lib/cms";
+import { getSiteSettings } from "../lib/cms";
 
 export const metadata: Metadata = {
   title: "Cranbourne Food Truck",

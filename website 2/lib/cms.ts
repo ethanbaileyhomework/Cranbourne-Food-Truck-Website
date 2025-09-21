@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
+import { fetchSheetStats } from "./stats";
 
 // Helper to load YAML/Markdown from content/ for CMS-driven data
 
@@ -22,10 +23,25 @@ export async function getStatsSettings() {
 }
 
 export async function getServiceStats() {
-  // Fetches via /api/stats (or direct for SSR)
-  const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + "/api/stats", { next: { revalidate: 600 } });
-  if (!res.ok) return { total_meals: 0, total_guests: 0, services_run: 0 };
-  return res.json();
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined);
+
+  if (!baseUrl) {
+    return fetchSheetStats();
+  }
+
+  try {
+    const res = await fetch(`${baseUrl}/api/stats`, {
+      next: { revalidate: 600 }
+    });
+    if (!res.ok) {
+      throw new Error("Failed to fetch stats from API");
+    }
+    return res.json();
+  } catch (error) {
+    return fetchSheetStats();
+  }
 }
 
 export async function getAboutPageContent() {

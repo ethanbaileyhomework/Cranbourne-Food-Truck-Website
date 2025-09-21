@@ -1,4 +1,4 @@
-import { getSiteSettings } from "@/lib/cms";
+import { getSiteSettings } from "../../lib/cms";
 import DonateBox from "../../components/DonateBox";
 import MarkdownRenderer from "../../components/MarkdownRenderer";
 

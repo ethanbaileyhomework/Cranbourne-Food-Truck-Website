@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { fetchSheetStats } from "@/lib/stats";
+import { fetchSheetStats } from "../../../lib/stats";
 
 // Serverless API route for stats (Google Sheets CSV)
 export const revalidate = 600; // 10 min cache
