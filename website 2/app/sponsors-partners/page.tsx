@@ -1,4 +1,4 @@
-import { getPartners } from "@/lib/cms";
+import { getPartners } from "../../lib/cms";
 import LogoGrid from "../../components/LogoGrid";
 
 export default async function SponsorsPartnersPage() {

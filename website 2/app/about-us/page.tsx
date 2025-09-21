@@ -1,4 +1,4 @@
-import { getAboutPageContent } from "@/lib/cms";
+import { getAboutPageContent } from "../../lib/cms";
 import MarkdownRenderer from "../../components/MarkdownRenderer";
 import TeamGrid from "../../components/TeamGrid";
 import LogoGrid from "../../components/LogoGrid";

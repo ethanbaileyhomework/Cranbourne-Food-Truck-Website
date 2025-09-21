@@ -1,4 +1,4 @@
-import { getHomeContent, getServiceStats, getSiteSettings } from "@/lib/cms";
+import { getHomeContent, getServiceStats, getSiteSettings } from "../lib/cms";
 import Hero from "../components/Hero";
 import InfoCards from "../components/InfoCards";
 import MapEmbed from "../components/MapEmbed";
